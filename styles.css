@@ -28,6 +28,10 @@ body{
 
 }
 
+img{
+  border-radius: 10px;
+}
+
 /* Fonts */
 .rubik {
     font-family: "Rubik", sans-serif;
@@ -287,6 +291,7 @@ nav .navbar .links li:hover .links-sub-menu {
   width: 300px;
   background-color: var(--whitebackground-color);
   box-shadow: var(--whitebordershadow-color);
+  color: black;
   margin: 5px;
   padding: 10px; 
   display: flex;
@@ -296,7 +301,12 @@ nav .navbar .links li:hover .links-sub-menu {
   overflow: hidden;
   transition: transform 0.3s ease, color 0.3s ease;
 }
-
+.box.noeffect{
+  border-radius: 10px;
+}
+.box.noeffect:hover p{
+  color: black;
+}
 .image-container {
   width: 80%;
   height: 200px;
@@ -322,6 +332,7 @@ nav .navbar .links li:hover .links-sub-menu {
   transition: color 0.3s ease;
 }
 
+
 .box p.btext .bx{
   font-size: 30px;
 }
@@ -333,16 +344,12 @@ nav .navbar .links li:hover .links-sub-menu {
 .content .box:hover p {
   color: red;
 }
+
 .box:hover{
   cursor:pointer
 }
-.btext.icons{
-  font-size: 20px;
-  display: flex;
-  flex-direction: row;
-
-  margin: 0;
-  transition: color 0.3s ease;
+.box.fat{
+  width: 100%;
 }
 
 @media (max-width: 800px) {
@@ -353,6 +360,7 @@ nav .navbar .links li:hover .links-sub-menu {
 
   .content .box {
     width: 250px; /* Reduce the width of the boxes */
+    color: black;
   }
 
   .image-container {
@@ -363,10 +371,12 @@ nav .navbar .links li:hover .links-sub-menu {
     font-size: 14px; /* Adjust font size for smaller screens */
     padding: 15px; /* Adjust padding for smaller screens */
   }
-  .box p.icons i {
-    font-size: 20px; /* Adjust icon size for smaller screens */
+  .box.noeffect{
+    border-radius: 10px;
   }
-
+  .box.noeffect:hover p{
+    color: black;
+  }
   .zoom-image {
     transform: scale(1); /* Reset image zoom scale for smaller screens */
   }
@@ -426,8 +436,6 @@ nav .navbar .links li:hover .links-sub-menu {
       margin: 10px;
   }
 }
-
-
 
 .foo1er{
 	width: 100%;
